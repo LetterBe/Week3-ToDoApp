@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class TodoTasks {
@@ -24,12 +25,15 @@ public class TodoTasks {
     }
 
     @Override
-    public int hashCode() {
-        return super.hashCode();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TodoTasks todoTasks = (TodoTasks) o;
+        return Objects.equals(id, todoTasks.id) && Objects.equals(task, todoTasks.task);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public int hashCode() {
+        return Objects.hash(id, task);
     }
 }

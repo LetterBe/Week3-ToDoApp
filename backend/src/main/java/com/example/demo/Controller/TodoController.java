@@ -1,9 +1,11 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import com.example.demo.Service.TodoService;
+import com.example.demo.TodoTasks;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -34,15 +36,9 @@ public class TodoController {
         return todoService.getTask(id);
     }
 
-    @PutMapping()
-    public void createTask(@RequestBody TodoTasks newTask){
+    @PostMapping()
+    public void createTask(@RequestBody TodoTasks newTask) {
         todoService.createTask(newTask);
-}
-
-
-
-
-
-
+    }
 
 }
