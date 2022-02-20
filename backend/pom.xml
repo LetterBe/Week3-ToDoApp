@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.LetterBe</groupId>
-        <artifactId>TodoApp</artifactId>
+        <artifactId>TodoApp-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>TodoApp</artifactId>
+    <artifactId>TodoApp-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>TodoApp</name>
+    <name>TodoApp-backend</name>
     <description>Demo TodoApp</description>
     <dependencies>
         <dependency>
